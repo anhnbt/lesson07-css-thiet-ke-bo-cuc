@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Class selector */
+
+.header {
+  margin-top: 57px;
+}
+
+.header,
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+/* Element selector */
+nav {
+  background-color: orange;
+  position: fixed;
+  /* absolute: Thay đổi vị trí của nó so với thành phần cha, element cha phải có tính chất là relative */
+  /* relative: Thay đổi đổi vị trí so với vị trí của chính nó */
+  /* static: mặc định, giữ nguyên vị trí */
+  width: 100%;
+  top: 0;
+}
+
+/* ID Selector */
+
+#img1 {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  float: left;
+}
+
+/* Clearfix */
+
+nav::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+ul li a {
+  display: inline-block;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+ul li a:hover {
+  color: green;
+  background-color: orangered;
+}
+
+.content {
+  width: 70%;
+  background-color: white;
+  float: left;
+  padding: 10px;
+  height: 300px;
+  /* overflow: hidden; */
+}
+
+.sidebar {
+  height: 30%;
+  background-color: gainsboro;
+  padding: 10px;
+  float: left;
+  height: 300px;
+}
+
+main::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+@media only screen and (max-width: 500px) {
+  .hidden {
+    display: none;
+  }
+  .content {
+    width: 100%;
+  }
+  .sidebar {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    color: red;
+  }
+}
+
+@media only  {
+  .content {
+    border: 3px solid red;
+  }
+}
